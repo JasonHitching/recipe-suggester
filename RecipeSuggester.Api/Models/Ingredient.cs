@@ -1,6 +1,5 @@
-﻿namespace RecipeSuggester.Api.Models
+﻿namespace RecipeSuggester.Api.Models;
+
+public class Ingredient
 {
-    public class Ingredient
-    {
-    }
 }
