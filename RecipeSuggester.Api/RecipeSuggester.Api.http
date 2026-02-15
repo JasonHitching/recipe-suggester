@@ -1,0 +1,5 @@
+﻿@RecipeSuggester.Api_HostAddress = https://localhost:44318
+
+GET {{RecipeSuggester.Api_HostAddress}}/test
+
+###
