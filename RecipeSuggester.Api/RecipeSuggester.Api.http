@@ -3,3 +3,8 @@
 GET {{RecipeSuggester.Api_HostAddress}}/test
 
 ###
+
+@prompt=Who built the ollama AI model
+POST {{RecipeSuggester.Api_HostAddress}}/recipes?prompt={{prompt}}
+
+###

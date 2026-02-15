@@ -1,0 +1,14 @@
+2026-02-15 18:50:43.809 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-15 18:50:43.838 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-15 18:50:43.838 +00:00 [INF] Hosting environment: Development
+2026-02-15 18:50:43.838 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-15 18:50:43.923 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 123.1631ms
+2026-02-15 18:50:43.924 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-15 18:51:05.136 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes?prompt=Who%20built%20the%20ollama%20AI%20model - null 0
+2026-02-15 18:51:05.170 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Controllers.RecipesController.TestApiChatResponse2 (RecipeSuggester.Api)'
+2026-02-15 18:51:05.703 +00:00 [INF] Route matched with {action = "TestApiChatResponse2", controller = "Recipes"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] TestApiChatResponse2(System.String) on controller RecipeSuggester.Api.Controllers.RecipesController (RecipeSuggester.Api).
+2026-02-15 18:51:05.716 +00:00 [INF] Making a request to ollama with the following prompt: Who built the ollama AI model
+2026-02-15 18:51:09.404 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-15 18:51:09.414 +00:00 [INF] Executed action RecipeSuggester.Api.Controllers.RecipesController.TestApiChatResponse2 (RecipeSuggester.Api) in 3707.3447ms
+2026-02-15 18:51:09.414 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Controllers.RecipesController.TestApiChatResponse2 (RecipeSuggester.Api)'
+2026-02-15 18:51:09.415 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes?prompt=Who%20built%20the%20ollama%20AI%20model - 200 null text/plain; charset=utf-8 4279.402ms
