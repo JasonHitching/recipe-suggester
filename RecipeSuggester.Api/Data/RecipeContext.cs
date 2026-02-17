@@ -20,5 +20,68 @@ public class RecipeContext : DbContext
         DbPath = System.IO.Path.Join(path, "recipes.db");
     }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite($"Data source={DbPath}");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder
+            .UseSqlite($"Data source={DbPath}")
+            .UseAsyncSeeding(async (context, _, cancellationToken) =>
+            {
+                context.Set<Recipe>().AddRangeAsync
+                (
+                    new Recipe
+                    {
+                        Id = 1,
+                        Name = "Spaghetti Bolognese",
+                        Description = "Classic Italian pasta with rich meat sauce.",
+                        RecipeId = 1001,
+                        PreparationTime = 15,
+                        CookingTime = 45,
+                        Servings = 4,
+                        Difficulty = "Medium"
+                    },
+                    new Recipe
+                    {
+                        Id = 2,
+                        Name = "Chicken Caesar Salad",
+                        Description = "Grilled chicken breast served on romaine lettuce with Caesar dressing.",
+                        RecipeId = 1002,
+                        PreparationTime = 10,
+                        CookingTime = 15,
+                        Servings = 2,
+                        Difficulty = "Easy"
+                    },
+                    new Recipe
+                    {
+                        Id = 3,
+                        Name = "Vegetable Stir Fry",
+                        Description = "Mixed vegetables stir-fried in a savory sauce.",
+                        RecipeId = 1003,
+                        PreparationTime = 10,
+                        CookingTime = 10,
+                        Servings = 3,
+                        Difficulty = "Easy"
+                    },
+                    new Recipe
+                    {
+                        Id = 4,
+                        Name = "Beef Wellington",
+                        Description = "Tenderloin steak coated with pâté and duxelles, wrapped in puff pastry.",
+                        RecipeId = 1004,
+                        PreparationTime = 30,
+                        CookingTime = 60,
+                        Servings = 4,
+                        Difficulty = "Hard"
+                    },
+                    new Recipe
+                    {
+                        Id = 5,
+                        Name = "Pancakes",
+                        Description = "Fluffy pancakes perfect for breakfast.",
+                        RecipeId = 1005,
+                        PreparationTime = 5,
+                        CookingTime = 10,
+                        Servings = 4,
+                        Difficulty = "Easy"
+                    }
+                )
+            };
 }

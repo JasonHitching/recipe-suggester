@@ -12,3 +12,27 @@
 2026-02-15 18:51:09.414 +00:00 [INF] Executed action RecipeSuggester.Api.Controllers.RecipesController.TestApiChatResponse2 (RecipeSuggester.Api) in 3707.3447ms
 2026-02-15 18:51:09.414 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Controllers.RecipesController.TestApiChatResponse2 (RecipeSuggester.Api)'
 2026-02-15 18:51:09.415 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes?prompt=Who%20built%20the%20ollama%20AI%20model - 200 null text/plain; charset=utf-8 4279.402ms
+2026-02-17 15:38:35.571 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 15:38:35.560 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 15:38:35.560 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 30
+2026-02-17 15:38:35.576 +00:00 [INF] Hosting environment: Development
+2026-02-17 15:38:35.577 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 15:38:35.609 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 15:38:35.632 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 80.3216ms
+2026-02-17 15:38:35.633 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 15:38:35.654 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 15:38:35.754 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 15:38:42.334 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 15:38:42.349 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 6692.719ms
+2026-02-17 15:38:42.349 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 15:38:42.353 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 6801.805ms
+2026-02-17 15:41:05.004 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 15:41:05.004 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 30
+2026-02-17 15:41:05.022 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 15:41:05.022 +00:00 [INF] Hosting environment: Development
+2026-02-17 15:41:05.022 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 15:41:05.043 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 15:41:05.054 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 56.203ms
+2026-02-17 15:41:05.055 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 15:41:05.082 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 15:41:05.140 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest

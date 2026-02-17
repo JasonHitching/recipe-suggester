@@ -1,10 +1,10 @@
 ﻿@RecipeSuggester.Api_HostAddress = https://localhost:44318
 
-GET {{RecipeSuggester.Api_HostAddress}}/test
+POST {{RecipeSuggester.Api_HostAddress}}/recipes/suggestion
+Content-Type: application/json
 
-###
-
-@prompt=Who built the ollama AI model
-POST {{RecipeSuggester.Api_HostAddress}}/recipes?prompt={{prompt}}
+{
+  //SuggestRecipeRequest
+}
 
 ###
