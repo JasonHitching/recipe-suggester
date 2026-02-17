@@ -6,51 +6,50 @@ using RecipeSuggester.Api.Data;
 
 #nullable disable
 
-namespace RecipeSuggester.Api.Migrations
+namespace RecipeSuggester.Api.Migrations;
+
+[DbContext(typeof(RecipeContext))]
+partial class RecipeContextModelSnapshot : ModelSnapshot
 {
-    [DbContext(typeof(RecipeContext))]
-    partial class RecipeContextModelSnapshot : ModelSnapshot
+    protected override void BuildModel(ModelBuilder modelBuilder)
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
+        modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
 
-            modelBuilder.Entity("RecipeSuggester.Api.Models.Recipe", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+        modelBuilder.Entity("RecipeSuggester.Api.Models.Recipe", b =>
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("INTEGER");
 
-                    b.Property<int>("CookingTime")
-                        .HasColumnType("INTEGER");
+                b.Property<int>("CookingTime")
+                    .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("TEXT");
 
-                    b.Property<string>("Difficulty")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                b.Property<string>("Difficulty")
+                    .IsRequired()
+                    .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                b.Property<string>("Name")
+                    .IsRequired()
+                    .HasColumnType("TEXT");
 
-                    b.Property<int>("PreparationTime")
-                        .HasColumnType("INTEGER");
+                b.Property<int>("PreparationTime")
+                    .HasColumnType("INTEGER");
 
-                    b.Property<int>("RecipeId")
-                        .HasColumnType("INTEGER");
+                b.Property<int>("RecipeId")
+                    .HasColumnType("INTEGER");
 
-                    b.Property<int>("Servings")
-                        .HasColumnType("INTEGER");
+                b.Property<int>("Servings")
+                    .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Recipes");
-                });
+                b.ToTable("Recipes");
+            });
 #pragma warning restore 612, 618
-        }
     }
 }

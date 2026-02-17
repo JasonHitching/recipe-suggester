@@ -1,27 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.AI;
-using OllamaSharp;
+using RecipeSuggester.Api.Controllers;
 
-namespace RecipeSuggester.Api.Controllers;
+namespace RecipeSuggester.Api.Features.SuggestRecipe;
 
-/// <summary>
-/// For basic crud
-/// </summary>
-[ApiController]
+[Controller]
 [Route("[controller]")]
-public class RecipesController(IChatClient ollamaChatClient, ILogger<RecipesController> logger) : ControllerBase
+public class SuggestRecipeEndpoint(IChatClient ollamaChatClient, ILogger<SuggestRecipeEndpoint> logger) : ControllerBase
 {
     private readonly IChatClient _ollamaChatClient = ollamaChatClient;
-    private readonly ILogger<RecipesController> _logger = logger;
-
-    [HttpGet]
-    [Route("/test")]
-    public async Task<string> TestAPIChatResponse()
-    {
-        var modelResponse = await _ollamaChatClient.GetResponseAsync("What is the meaning of life?");
-
-        return modelResponse.ToString();
-    }
+    private readonly ILogger<SuggestRecipeEndpoint> _logger = logger;
 
     [HttpPost]
     public async Task<string> TestApiChatResponse2(string prompt)
