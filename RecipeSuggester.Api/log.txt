@@ -165,3 +165,77 @@
 2026-02-17 16:49:19.211 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 16778.2328ms
 2026-02-17 16:49:19.211 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
 2026-02-17 16:49:19.216 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 16867.7898ms
+2026-02-17 18:44:09.345 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 18:44:09.333 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 18:44:09.351 +00:00 [INF] Hosting environment: Development
+2026-02-17 18:44:09.352 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 18:44:09.993 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 671.3329ms
+2026-02-17 18:44:09.995 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 18:44:13.296 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 18:44:13.860 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:44:13.909 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 18:44:14.029 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 18:49:39.728 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 18:49:39.743 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 18:49:39.743 +00:00 [INF] Hosting environment: Development
+2026-02-17 18:49:39.743 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 18:49:39.832 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 111.4861ms
+2026-02-17 18:49:39.834 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 18:49:50.162 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 18:49:50.165 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:49:50.187 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 18:49:50.240 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 18:50:22.744 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 18:50:22.755 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 32565.2494ms
+2026-02-17 18:50:22.755 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:50:22.759 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 32598.4847ms
+2026-02-17 18:50:27.590 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 18:50:27.591 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:50:27.591 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 18:50:27.594 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 18:50:29.632 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 18:50:29.634 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 2042.6767ms
+2026-02-17 18:50:29.634 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:50:29.634 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 2044.5283ms
+2026-02-17 18:57:59.722 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 18:57:59.739 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 18:57:59.739 +00:00 [INF] Hosting environment: Development
+2026-02-17 18:57:59.739 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 18:57:59.828 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 113.0305ms
+2026-02-17 18:57:59.829 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 18:58:02.560 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 18:58:02.563 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:58:02.584 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 18:58:02.638 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 18:58:08.651 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 18:58:08.660 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 6074.2452ms
+2026-02-17 18:58:08.661 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 18:58:08.665 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 6105.7779ms
+2026-02-17 18:59:53.235 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 18:59:53.250 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 18:59:53.250 +00:00 [INF] Hosting environment: Development
+2026-02-17 18:59:53.250 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 18:59:53.340 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 112.1353ms
+2026-02-17 18:59:53.342 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 19:00:05.461 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 19:00:05.464 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 19:00:05.485 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 19:00:05.538 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 19:00:13.552 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 19:00:13.561 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 8073.3482ms
+2026-02-17 19:00:13.561 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 19:00:13.566 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 8105.1203ms
+2026-02-17 19:03:37.065 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - null null
+2026-02-17 19:03:37.081 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-17 19:03:37.082 +00:00 [INF] Hosting environment: Development
+2026-02-17 19:03:37.082 +00:00 [INF] Content root path: C:\Users\jason\source\repos\RecipeSuggester\RecipeSuggester.Api
+2026-02-17 19:03:37.165 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - 404 null null 108.1896ms
+2026-02-17 19:03:37.167 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:44318/, Response status code: 404
+2026-02-17 19:03:43.657 +00:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/recipes/suggestion - application/json 99
+2026-02-17 19:03:43.660 +00:00 [INF] Executing endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 19:03:43.680 +00:00 [INF] Route matched with {action = "GenerateRecipeSuggestion", controller = "SuggestRecipeEndpoint"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.String] GenerateRecipeSuggestion(RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest) on controller RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint (RecipeSuggester.Api).
+2026-02-17 19:03:43.733 +00:00 [INF] Making a request to ollama with the following prompt: RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeRequest
+2026-02-17 19:03:48.220 +00:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2026-02-17 19:03:48.229 +00:00 [INF] Executed action RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api) in 4546.8759ms
+2026-02-17 19:03:48.230 +00:00 [INF] Executed endpoint 'RecipeSuggester.Api.Features.SuggestRecipe.SuggestRecipeEndpoint.GenerateRecipeSuggestion (RecipeSuggester.Api)'
+2026-02-17 19:03:48.234 +00:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/recipes/suggestion - 200 null text/plain; charset=utf-8 4578.1997ms

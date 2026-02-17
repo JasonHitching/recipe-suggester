@@ -30,7 +30,8 @@ public class SuggestRecipeEndpoint : ControllerBase
 
             var parsedIngredients = String.Join(", ", recipeRequest.Ingredients);
 
-            var finalPrompt = $"Give me a recommended recipe from these recipes {recipes} which best fits with these ingredients: ({parsedIngredients})";
+            var finalPrompt = BuildPrompt(parsedIngredients, recipes);
+
 
             var promptResponse = await _ollamaChatClient.GetResponseAsync(finalPrompt);
 
@@ -43,5 +44,28 @@ public class SuggestRecipeEndpoint : ControllerBase
         }
 
         return "";
+    }
+
+    private string BuildPrompt(string parsedIngredients, string recipes)
+    {
+        var systemPrompt = @"You are a recipe matching assistant. Your task is to analyze recipes and match them to available ingredients.
+
+            Matching criteria:
+            1. Count how many of the user's ingredients appear in each recipe
+            2. Prioritize recipes where the user has ALL or MOST of the key ingredients
+            3. Consider which recipe needs the fewest additional ingredients
+
+            Output format: Return the most appropriate recipe, also highlight any potential extra ingredients that may be required to make the full dish.
+
+            General remarks: This is a personal prompt, refer to people in first person. No use of terms like; user etc";
+
+        var userPrompt = $@"Available ingredients: {parsedIngredients}
+
+            Recipes to consider:
+            {recipes}
+
+            Which single recipe best matches the available ingredients?";
+
+        return $"{systemPrompt}\n\n{userPrompt}";
     }
 }

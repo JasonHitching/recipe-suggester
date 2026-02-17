@@ -17,7 +17,6 @@ public class SuggestRecipeHandler(RecipeContext recipeContext)
     {
         var allRecipes = await _recipeContext.Recipes.ToListAsync();
 
-        
         return string.Join("\n", allRecipes.Select(r => r.ToString()));
     }
 }

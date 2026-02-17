@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RecipeContext>();
 
-IChatClient ollamaClient = new OllamaApiClient("http://localhost:11434/", "smollm2:135m");
+IChatClient ollamaClient = new OllamaApiClient("http://localhost:11434/", "llama3.2:3b");
 
 builder.Host.UseSerilog((context, loggerConfiguration) =>
 {
