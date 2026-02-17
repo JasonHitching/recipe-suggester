@@ -3,6 +3,7 @@ using Microsoft.Extensions.AI;
 using OllamaSharp;
 using RecipeSuggester.Api.Data;
 using RecipeSuggester.Api.Features.SuggestRecipe;
+using RecipeSuggester.Api.Respositories;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,9 +20,8 @@ builder.Host.UseSerilog((context, loggerConfiguration) =>
 });
 
 builder.Services.AddSingleton<IChatClient>(ollamaClient);
-
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.AddScoped<SuggestRecipeHandler>();
-
 
 var app = builder.Build();
 

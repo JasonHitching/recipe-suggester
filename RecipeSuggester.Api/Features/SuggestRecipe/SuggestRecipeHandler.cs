@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RecipeSuggester.Api.Data;
 using RecipeSuggester.Api.Models;
+using RecipeSuggester.Api.Respositories;
 using System.Text;
 
 namespace RecipeSuggester.Api.Features.SuggestRecipe;
@@ -8,15 +9,19 @@ namespace RecipeSuggester.Api.Features.SuggestRecipe;
 /// <summary>
 /// TODO: Handle db query? passing request to a service to handle the AI prompt?
 /// </summary>
-public class SuggestRecipeHandler(RecipeContext recipeContext)
+public class SuggestRecipeHandler
 {
-    private readonly RecipeContext _recipeContext = recipeContext;
+    private readonly IRecipeRepository _recipeRepository;
 
-
-    public async Task<string> GetAllRecipes()
+    public SuggestRecipeHandler(IRecipeRepository recipeRepository)
     {
-        var allRecipes = await _recipeContext.Recipes.ToListAsync();
+        _recipeRepository = recipeRepository;
+    }
 
-        return string.Join("\n", allRecipes.Select(r => r.ToString()));
+    public async Task<SuggestRecipeResponse> GetAllRecipes()
+    {
+        var allRecipes = await _recipeRepository.GetAllRecipes();
+
+        return new SuggestRecipeResponse { RecipeResponse = string.Join("\n", allRecipes.Select(r => r.ToString())) }; 
     }
 }

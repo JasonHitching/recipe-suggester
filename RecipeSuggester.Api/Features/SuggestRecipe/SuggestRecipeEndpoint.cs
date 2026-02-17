@@ -30,8 +30,7 @@ public class SuggestRecipeEndpoint : ControllerBase
 
             var parsedIngredients = String.Join(", ", recipeRequest.Ingredients);
 
-            var finalPrompt = BuildPrompt(parsedIngredients, recipes);
-
+            var finalPrompt = BuildPrompt(parsedIngredients, recipes.RecipeResponse);
 
             var promptResponse = await _ollamaChatClient.GetResponseAsync(finalPrompt);
 
