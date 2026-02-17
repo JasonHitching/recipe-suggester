@@ -10,4 +10,9 @@ public class Recipe
     public int CookingTime { get; set; }
     public int Servings {  get; set; }
     public string Difficulty { get; set; } = default!;
+
+    public override string ToString()
+    {
+        return $"{Name}: {Description} (Prep: {PreparationTime} min, Cook: {CookingTime} min, Servings: {Servings}, Difficulty: {Difficulty})";
+    }
 }

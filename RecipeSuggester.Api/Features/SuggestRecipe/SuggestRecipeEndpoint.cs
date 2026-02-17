@@ -20,7 +20,7 @@ public class SuggestRecipeEndpoint : ControllerBase
 
     [HttpPost]
     [Route("/recipes/suggestion")]
-    public async Task<string> GenerateRecipeSuggestion(SuggestRecipeRequest recipeRequest)
+    public async Task<string> GenerateRecipeSuggestion([FromBody] SuggestRecipeRequest recipeRequest)
     {
         try
         {
@@ -28,9 +28,9 @@ public class SuggestRecipeEndpoint : ControllerBase
 
             var recipes = await _handler.GetAllRecipes();
 
-            var parsedIngredients = String.Join(", ", recipeRequest);
+            var parsedIngredients = String.Join(", ", recipeRequest.Ingredients);
 
-            var finalPrompt = $"Give me a list of recommended recipes based on these ingredients: ({parsedIngredients})";
+            var finalPrompt = $"Give me a recommended recipe from these recipes {recipes} which best fits with these ingredients: ({parsedIngredients})";
 
             var promptResponse = await _ollamaChatClient.GetResponseAsync(finalPrompt);
 

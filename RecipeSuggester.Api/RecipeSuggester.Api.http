@@ -4,7 +4,11 @@ POST {{RecipeSuggester.Api_HostAddress}}/recipes/suggestion
 Content-Type: application/json
 
 {
-  //SuggestRecipeRequest
+  "ingredients": [
+    "chicken breast",
+    "romaine lettuce",
+    "parmesan cheese"
+  ]
 }
 
 ###
